@@ -1,0 +1,190 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+header {
+    background-color: #b1e8ef;
+    padding: 30px;
+    font-size: 35px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+.img{
+    cursor: pointer;
+}
+#busqueda{
+    height: 30px;
+    width: 400px;
+}
+#busqueda-dos{
+    
+    width: 40%;
+    margin: auto;
+    visibility: hidden;
+    margin-top:25px;
+    display: flex;
+}
+.btn{
+    right: 30px;
+    top: 5px;
+    color: #000000;
+    text-align: center;
+    padding: 15px 15px;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(38, 0, 255, 0.329);
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color:rgb(56, 189, 223);
+    color: rgb(255, 255, 255);
+}
+/* barra de navegacion */
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+.fa-bars{
+    position: absolute;
+    font-size: 0px; 
+    visibility: collapse;
+    z-index: 0;     
+}
+.list{
+    z-index: 1;
+    list-style-type: none;/*  */
+}
+.list li{
+    float: left;
+}
+.list li>a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    list-style-type: none;
+} 
+.list a:hover {
+    background-color: #1dc3dd;
+}
+
+/* quienes somos? */
+#quienessomos{
+    display: flex;
+    justify-content:center;
+}
+#mision{
+    display: flex;
+    justify-content:center;
+    background-color: #d3d4d4;
+}
+#vision{
+    display: flex;
+    justify-content:center;
+    background-color: #a6a6a6;
+}
+.img{
+    margin-top: 20px ;
+    margin-bottom: 20px;
+
+}
+.info{
+    padding: 50px;
+    width: 800px;
+}
+.card-title{
+    text-align: center;
+
+}
+/* footer */
+footer {
+    background-color: #777;
+    padding: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.nosotros{
+    border: 2px solid gray;
+    padding: 8px;
+    margin-bottom: 10px ;
+    cursor: pointer;
+}
+#redes{
+    color: #1dc3dd;
+    font-size: 30px;
+}
+
+
+@media screen and (max-width: 600px) {
+    *{ 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+    }
+
+    .hamb{
+        position: absolute;
+    }
+    .hamb>i{
+        width: 10%;
+        padding: 20px;
+        justify-content: center;
+        
+        margin: auto;
+        display: flex;
+    }
+    .fa-bars{
+        font-size: 40px;
+        padding-top: 15px;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+        visibility: visible;
+        justify-content: center;
+        margin: auto;
+    }
+    .fa-bars:hover{
+        color: #00e6e6;
+        
+    }
+    .list{
+        border: 2px solid rgb(48, 48, 48);
+        visibility: collapse;
+        width: 0px;
+    }
+    
+
+    #redes{
+        width: 80%;
+        margin: 10px auto;
+       
+       justify-content: center;
+    }
+
+
+}
+
+
+
+

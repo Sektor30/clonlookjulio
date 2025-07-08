@@ -1,0 +1,53 @@
+.blog-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: 60%;
+    z-index: 1000;
+    display: none;
+    animation: slideIn 0.5s ease-out;
+}
+
+.blog-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0dcaf0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.blog-button:hover {
+    background-color: #0ba8c8;
+    transform: translateY(-2px);
+    color: white;
+    
+    text-decoration: none;
+}
+
+.blog-popup:hover {
+    opacity: 100%;
+}
+
+
+
+.blog-button i {
+    font-size: 1.1rem;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+

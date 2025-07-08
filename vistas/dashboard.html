@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Look</title>
+  <link rel="shortcut icon" href="../assets/chooj-ico.png" type="image/x-icon">
+  <!-- owl carusel -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+  <!-- animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- css dsboard -->
+
+  <link rel="stylesheet" href="../css/dashboard.css">
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
+
+  <nav class="navbar navbar-expand-lg  navegacion px-4 " >
+    <a class="navbar-brand" href="#">
+        <img src="../assets/logojuniolook.png" width="200px" alt="logo-chooj"/>
+    </a>
+    <button class="navbar-toggler" style="color: rgba(0, 32, 68, 0);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa-solid fa-bars fs-2 text-info"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto d-flex gap-1  justify-content-center align-items-center ">
+            <li id="btnmodulos" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Módulos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../vistas/estilos.html">Estilos</a></li>
+                    <li><a class="dropdown-item" href="../vistas/guiones.html">Guiones</a></li>
+                    <li><a class="dropdown-item" href="../vistas/produccion.html">Producción</a></li>
+                    <li><a class="dropdown-item" href="../vistas/edicion.html">Edición</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../vistas/quienes-somos.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Certificación</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../vistas/noticias.html">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a id="ico" class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
+                    <i class="fa-regular fa-circle-user fs-1"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- Offcanvas (sidebar para la info del usuario) -->
+  <div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasUser" aria-labelledby="offcanvasUserLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasUserLabel">Información del Usuario</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body ">
+      <p><strong>Nombre:</strong>
+      <p id="NombreUser"></p>
+      </p>
+      <p><strong>Email:</strong> usuario@example.com</p>
+      <hr>
+
+
+      <a href="./cerrando.html" class="btn btn-outline-danger w-100">Cerrar sesión</a>
+
+      <div class="mod">
+        <div class="nav-item dropdown py-4">
+          <a class="nav-link  text-center text-dark border-bottom border-dark ">
+            Módulos
+          </a>
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:ESTILOS</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-estilos-offcanvas" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+
+                <a href="./estilos.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:GUIONES</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-guiones-offcanvas" role="progressbar" style="width: 20%;" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+
+                <a href="./guiones.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:PRODUCCION</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-produccion-offcanvas" role="progressbar" style="width: 5%;" aria-valuenow="5"
+                    aria-valuemin="0" aria-valuemax="100">5%</div>
+                </div>
+
+                <a href="./produccion.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:EDICIÓN</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-edicion-offcanvas" role="progressbar" style="width: 5%;" aria-valuenow="5"
+                    aria-valuemin="0" aria-valuemax="100">5%</div>
+                </div>
+
+                <a href="./edicion.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- info dashboard -->
+  <div class="container-fluid mx-auto p-3 column-gap-2  flex-wrap  ">
+    <div class="ejemplo d-flex col-lg-11 col-sm-12 col-md-12 flex-wrap m-auto  ">
+      <div class="info-student col-lg-3  col-md-12  col-sm-12  d-flex my-2    ">
+
+        <!-- Barra lateral -->
+        <div class=" info-student col-lg-12 col-md-12 col-sm-12 column-gap-3  px-2 rounded-3  ">
+          <ul class="col-lg-12 list-group  gap-1 bg-dark-subtle p-2  rounded-3">
+
+            <li class="list-group-item ">
+
+
+              <div class="row justify-content-between align-items-center  ">
+
+                <a class="text-decoration-none text-dark  col-lg-7 col-md-4 col-sm-4 " data-bs-toggle="collapse"
+                  href="#multiCollapseExample4" role="button" aria-expanded="true"
+                  aria-controls="multiCollapseExample4"> MI PERFIL
+
+
+                </a>
+
+                <div class="col-lg-3 col-md-5 col-sm-2 text-end  " type="button" data-bs-toggle="collapse"
+                  href="#multiCollapseExample4" role="button" aria-expanded="true style="
+                  text-decoration:none;color:gray; padding-top: 10px">
+                  <i class="fa fa-chevron-down fs-4"></i>
+                </div>
+              </div>
+
+
+              <div class="row ">
+                <div class="col">
+
+                  <div class="collapse multi-collapse show  " id="multiCollapseExample4">
+
+
+                    <!-- START  -->
+
+                    <div class="container">
+                      <div class="row profile">
+                        <div class="col-md-12 ">
+                          <div class="profile-sidebar  rounded-3 ">
+                            <!-- SIDEBAR USERPIC -->
+                            <div class=" image-profile ">
+                              <a href="" data-bs-toggle="modal" data-bs-target="#modalEditarPerfil"">
+                              <img src=" ../assets/user-profile-2-removebg-preview.png"
+                                class="img-responsive user-profile " alt="imagen user" style=" width: 100%; " />
+                              </a>
+                            </div>
+                            <!-- END SIDEBAR USERPIC -->
+                            <!-- SIDEBAR USER TITLE -->
+                            <div class="profile-usertitle">
+
+                              <p><strong>Nombre:</strong>
+                              <p id="NombreU">fss</p>
+                              </p>
+                              <div class="profile-usertitle-job">Participante</div>
+                            </div>
+                            <!-- END SIDEBAR USER TITLE -->
+                            <!-- SIDEBAR BUTTONS -->
+
+
+
+                            <div class="profile-userbuttons row justify-content-center  py-3  g-2  ">
+                              <button type="button"
+                                class="col-lg-4 col-md-6 col-sm-5 btn btn-success btn-sm text-center align-items-center"
+                                data-bs-toggle="modal" data-bs-target="#modalEditarPerfil">
+                                Editar
+                              </button>
+
+
+                              <a href="./cerrando.html"
+                                class="btn-sm col-lg-5 col-md-6 col-sm-5  btn btn-danger border border-dark-subtle"
+                                type="button ">
+                                Cerrar sesión
+                                </button>
+                              </a>
+                            </div>
+
+                            <!-- Modal Editar Perfil -->
+                            <div class="modal fade" id="modalEditarPerfil" tabindex="-1"
+                              aria-labelledby="modalEditarPerfilLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg modal-dialog-centered center ">
+                                <div class="modal-content  rounded-3 ">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="modalEditarPerfilLabel">Editar Perfil</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Cerrar"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <!-- Formulario de edición de perfil -->
+                                    <form>
+                                      <div class="mb-3">
+                                        <label for="nombrePerfil" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombrePerfil"
+                                          placeholder="Tu nombre">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="emailPerfil" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="emailPerfil"
+                                          placeholder="tu@email.com">
+                                      </div>
+                                      <!-- Selección de imagen de perfil -->
+                                      <div class="mb-3">
+                                        <label class="form-label">Imagen de perfil</label>
+                                        <div class="d-flex gap-3 justify-content-center align-items-center flex-wrap">
+                                          <img src="../assets/user-profile-2-removebg-preview.png" id="imgPerfilActual"
+                                            class="img-thumbnail perfil-opcion"
+                                            data-img="../assets/user-profile-2-removebg-preview.png"
+                                            style="width: 80px; cursor:pointer; border: 2px solid #0dcaf0;"
+                                            title="Actual">
+                                          <img src="../assets/abeja peque.png" id="imgPerfilFemenino"
+                                            class="img-thumbnail perfil-opcion" data-img="../assets/abeja peque.png"
+                                            style="width: 80px; cursor:pointer;" title="Femenino">
+                                          <img src="../assets/araña-robot.png" id="imgPerfilAleatorio"
+                                            class="img-thumbnail perfil-opcion" data-img="../assets/araña-robot.png"
+                                            style="width: 80px; cursor:pointer;" title="Aleatorio">
+                                          <img src="../assets/FANTASMA1.png" id="imgPerfilAleatorio"
+                                            class="img-thumbnail perfil-opcion" data-img="../assets/FANTASMA1.png"
+                                            style="width: 80px; cursor:pointer;" title="Aleatorio">
+                                          <img src="../assets/2-personaje.png" id="imgPerfilAleatorio"
+                                            class="img-thumbnail perfil-opcion" data-img="../assets/2-personaje.png"
+                                            style="width: 80px; cursor:pointer;" title="Aleatorio">
+                                          <img src="../assets/user-profile-2-removebg-preview.png"
+                                            id="imgPerfilAleatorio" class="img-thumbnail perfil-opcion"
+                                            data-img="../assets/user-profile-2-removebg-preview.png"
+                                            style="width: 80px; cursor:pointer;" title="Aleatorio">
+                                        </div>
+                                        <div class="container justify-content-center text-center">
+                                          <small class="text-muted   m-auto ">Haz clic en una imagen para seleccionarla
+                                            como tu perfil.</small>
+
+                                        </div>
+
+                                      </div>
+                                      <!-- Puedes agregar más campos aquí si lo necesitas -->
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                      id="btnCancelarCambiosPerfil">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" id="btnGuardarCambiosPerfil">Guardar
+                                      cambios</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- END -->
+
+                  </div>
+                </div>
+
+
+            </li>
+
+            <li class="list-group-item py-3 rounded-2   "><a class="text-decoration-none text-primary nav-link border border-0"
+                href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser"  >MI
+                AVANCE <span class="float-end"><i class="fa-regular text-dark fs-3 fa-circle-user "></i></span></a>
+            </li>
+
+
+            <!-- collapse estudiantes -->
+            <li class="list-group-item rounded-3">
+              <p class="d-inline-flex gap-1 w-100">
+                <a class="text-decoration-none text-dark pt-2 w-100" data-bs-toggle="collapse"
+                  href="#multiCollapseExample1" role="button" aria-expanded="false"
+                  aria-controls="multiCollapseExample1">Estudiantes <span class="float-end"><i class="fa fa-chevron-down fs-5"></i></span></a>
+
+              </p>
+              <div class="row  ">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                      <ul id="lista-estudiantes" class="justify-content-center  list-group text-center">
+                        <!-- Los estudiantes se cargarán aquí dinámicamente -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+            </li>
+
+
+            <!-- collapse instructores -->
+            <li class="list-group-item rounded-3">
+
+              <p class="d-inline-flex gap-1 w-100">
+                <a class="text-decoration-none text-dark pt-2 w-100" data-bs-toggle="collapse"
+                  href="#multiCollapseExample2" role="button" aria-expanded="false"
+                  aria-controls="multiCollapseExample2">Instructores online <span class="float-end"><i class="fa fa-chevron-down fs-5"></i></span></a>
+
+              </p>
+              <div class="row  ">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                      <ul class="list-group">
+                        <li class="list-group-item">Sergio Higuita</li>
+                        <li class="list-group-item">Mateo Echeverri</li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+            </li>
+
+            <li class="list-group-item">
+              <p class="d-inline-flex gap-1 w-100">
+                <a class="text-decoration-none text-dark pt-2 w-100" data-bs-toggle="collapse"
+                  href="#multiCollapseExample6" role="button" aria-expanded="false"
+                  aria-controls="multiCollapseExample1">Contacto <span class="float-end"><i class="fa fa-chevron-down fs-5"></i></span></a>
+
+              </p>
+              <div class="row  ">
+                <div class="col ">
+                  <div class="collapse multi-collapse" id="multiCollapseExample6">
+                    <div class="card card-body ">
+
+                      <div class="container py-5">
+                        <div class="text-center mb-4">
+                          <h3 class="fw-bold text-dark">CONTACTO</h3>
+                          <p class="text-muted"> Comunícate con los instructores</p>
+                        </div>
+
+                        <form>
+                          <div class="mb-3">
+                            <input type="text" class="form-control bg-dark-stable text-dark border border-info "
+                              placeholder="Name">
+                          </div>
+
+                          <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                              <input type="email" class="form-control bg-dark-stable text-dark border border-info "
+                                placeholder="Email">
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control bg-dark-stable text-dark border border-info "
+                                placeholder="Celular">
+                            </div>
+                          </div>
+
+                          <div class="mb-3">
+                            <textarea class="form-control bg-dark-stable text-dark border border-info " rows="5"
+                              placeholder="Message"></textarea>
+                          </div>
+
+                          <div class="text-end">
+                            <button type="submit" class="btn btn-primary rounded-pill px-4">Send Message</button>
+                          </div>
+                        </form>
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+            </li>
+
+          </ul>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- Contenido principal -->
+
+      <div class="nuevocontenedor col-sm-12 col-md-12 col-lg-6 gap-2 d-flex flex-wrap ">
+
+        <div class="contenido col-md-12 col-sm-12 col-lg-12   rounded-3  p-2 my-2   ">
+          <div class="input-group col-lg-10 mb-3 ">
+            <input type="text" class="form-control " placeholder="Buscar" />
+            <button class="btn btn-primary">🔍</button>
+          </div>
+
+          <div class="card mb-3 ">
+            <div class="card-header p-0 ">
+
+              <div class="btn btn-link w-100 d-flex justify-content-between align-items-center col-lg-12 col-sm-12 ">
+                <span class="col-lg-4  ">
+                  <a href="./estilos.html" class="btn btn-primary rounded-2 text-white">MÓDULO:ESTILOS</a>
+                </span>
+                <span class="col-lg-8 col-md-8 col-sm-8  p-2 text-end" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEstilos" aria-expanded="true" aria-controls="collapseEstilos"
+                  style="text-decoration:none;">
+                  <i class="fa fa-chevron-down fs-2 " id="chevronEstilos"></i>
+                </span>
+              </div>
+
+
+            </div>
+            <div id="collapseEstilos" class="collapse show">
+              <div class="card-body ">
+                <div class="informacion d-flex ">
+                  <div class="row ">
+                    <div class="parrafos p-4 col-lg-8 col-sm-12  order-lg-1 ">
+                      <p class="card-text col-lg-8 col-sm-12 fst-italic">Descripción.</p>
+                      <p class="card-text col-lg-8 col-sm-12 ">
+                        Explora los estilos visuales y narrativos que definen la atmósfera y el lenguaje de una
+                        producción cinematográfica.
+
+                        Aprende cómo la dirección de arte, la fotografía y el diseño de producción contribuyen a la
+                        identidad visual de una película, generando emociones y significado en cada escena.
+
+
+
+
+                      </p>
+                    </div>
+                    <div class="image col-lg-4 col-sm-12 col-md-12    order-lg-2 py-4 my-3  text-center   ">
+                      <a href="./estilos.html"> <img src="../assets/modulosImage4.png" width="100%"
+                          class="image col-lg-12 col-md-12 col-sm-12  p-2 shadow" alt=""> </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" id="progress-estilos-dashboard" style="width: 25%">25%</div>
+                </div>
+                <!-- RAITING 1--------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                <div class="puntaje1">
+                  <div class="rating1 ">
+                    <input value="5" name="rate1" id="star5mod1" type="radio">
+                    <label for="star5mod1">★</label>
+                    <input value="4" name="rate1" id="star4mod1" type="radio">
+                    <label for="star4mod1">★</label>
+                    <input value="3" name="rate1" id="star3mod1" type="radio" checked>
+                    <label for="star3mod1">★</label>
+                    <input value="2" name="rate1" id="star2mod1" type="radio">
+                    <label for="star2mod1">★</label>
+                    <input value="1" name="rate1" id="star1mod1" type="radio">
+                    <label for="star1mod1">★</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header p-0">
+              <div class="btn btn-link w-100 d-flex justify-content-between align-items-center">
+                <span class="col-3">
+                  <a href="./guiones.html" class="btn btn-primary rounded-2 text-white">MÓDULO:GUIONES</a>
+                </span>
+                <span class="col-9 p-2 text-end  " type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseGuiones" aria-expanded="true" aria-controls="collapseGuiones"
+                  style="text-decoration:none;">
+                  <i class="fa fa-chevron-down fs-2" id="chevronGuiones"></i>
+                </span>
+              </div>
+            </div>
+            <div id="collapseGuiones" class="collapse show">
+              <div class="card-body">
+                <div class="informacion d-flex">
+                  <div class="row">
+                    <div class="parrafos col-lg-8 col-md-12 p-4">
+                      <p class="card-text col-lg-12 fst-italic ">Descripción.</p>
+                      <p class="card-text col-lg-12 ">
+                        Descubre la importancia del guion como hoja de ruta para la producción audiovisual.
+
+                        Conoce técnicas para estructurar historias, desarrollar personajes y plasmar ideas en un formato
+                        profesional, facilitando la organización y el rodaje de tu proyecto cinematográfico.
+
+
+
+
+                      </p>
+                    </div>
+                    <div class="image-base col-lg-4  py-4 my-3 text-center m-auto "> <a href="./guiones.html"> <img
+                          src="../assets/modulosImage3.png"
+                          class="image col-sm-12 rounded  p-2 shadow " width="100%" alt=""> </a></div>
+                  </div>
+                </div>
+                <div class="progress my-2" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" id="progress-guiones-dashboard" style="width: 0%">0%</div>
+                </div>
+                <div class="puntaje2">
+                  <div class="rating1">
+                    <input value="5" name="rate2" id="star5mod2" type="radio">
+                    <label for="star5mod2">★</label>
+                    <input value="4" name="rate2" id="star4mod2" type="radio">
+                    <label for="star4mod2">★</label>
+                    <input value="3" name="rate2" id="star3mod2" type="radio" checked>
+                    <label for="star3mod2">★</label>
+                    <input value="2" name="rate2" id="star2mod2" type="radio">
+                    <label for="star2mod2">★</label>
+                    <input value="1" name="rate2" id="star1mod2" type="radio">
+                    <label for="star1mod2">★</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header p-0">
+              <div class="btn btn-link w-100 d-flex justify-content-between align-items-center">
+                <span class="col-lg-4 ">
+                  <a href="./produccion.html" class="btn btn-primary rounded-2 text-white">MÓDULO: PRODUCCIÓN</a>
+                </span>
+                <span class="col-5  p-2 text-end" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseProduccion" aria-expanded="true" aria-controls="collapseProduccion"
+                  style="text-decoration:none;">
+                  <i class="fa fa-chevron-down fs-2" id="chevronProduccion"></i>
+                </span>
+              </div>
+            </div>
+            <div id="collapseProduccion" class="collapse show">
+              <div class="card-body">
+                <div class="informacion d-flex">
+                  <div class="row">
+                    <div class="parrafos col-lg-8 col-md-12">
+                      <p class="card-text col-12 fst-italic">Descripción.</p>
+                      <p class="card-text col-12 ">
+                        Adéntrate en la organización, planificación y ejecución de un rodaje cinematográfico.
+
+                        Aprende a coordinar equipos, gestionar recursos y resolver imprevistos para transformar un guion
+                        en una producción audiovisual exitosa.
+
+
+
+
+                      </p>
+                    </div>
+                    <div class="image-base col-lg-4 py-4 my-3 text-center"> <a href="./produccion.html"> <img
+                          src="../assets/modulosImage2.png"
+                          class="image col-12 rounded  p-2 shadow" alt=""></a> </div>
+                  </div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" id="progress-produccion-dashboard" style="width: 5%">5%</div>
+                </div>
+                <div class="puntaje">
+                  <div class="rating1">
+                    <input value="5" name="rate3" id="star5mod3" type="radio">
+                    <label for="star5mod3">★</label>
+                    <input value="4" name="rate3" id="star4mod3" type="radio">
+                    <label for="star4mod3">★</label>
+                    <input value="3" name="rate3" id="star3mod3" type="radio" checked>
+                    <label for="star3mod3">★</label>
+                    <input value="2" name="rate3" id="star2mod3" type="radio">
+                    <label for="star2mod3">★</label>
+                    <input value="1" name="rate3" id="star1mod3" type="radio">
+                    <label for="star1mod3">★</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header p-0">
+              <div class="btn btn-link w-100 d-flex justify-content-between align-items-center">
+                <span class="col-3">
+                  <a href="./edicion.html" class="btn btn-primary rounded-2 text-white">MÓDULO:EDICIÓN</a>
+                </span>
+                <span class="col-9  p-2 text-end" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEdicion" aria-expanded="true" aria-controls="collapseEdicion"
+                  style="text-decoration:none;">
+                  <i class="fa fa-chevron-down fs-2" id="chevronEdicion"></i>
+                </span>
+              </div>
+            </div>
+            <div id="collapseEdicion" class="collapse show">
+              <div class="card-body ">
+                <div class="informacion d-flex">
+                  <div class="row">
+                    <div class="parrafos col-lg-8 col-md-12">
+                      <p class="card-text col-12 fst-italic">Descripción. </p>
+                      <p class="card-text col-12 ">
+                        Descubre el arte de la edición y la postproducción en el cine.
+
+                        Conoce cómo seleccionar, unir y mejorar las tomas para construir el ritmo, la narrativa y el
+                        impacto emocional de tu película.
+
+
+
+
+
+                      </p>
+                    </div>
+                    <div class="image-base col-lg-4 col-md-12 text-center py-4 my-3  "> <a href="./edicion.html"> <img
+                          src="../assets/modulosImage1.png"
+                          class="image col-12 rounded  p-2 shadow" alt=""> </a></div>
+                  </div>
+                </div>
+                <div class="progress my-2" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" id="progress-edicion-dashboard" style="width: 0%">0%</div>
+                </div>
+                <div class="puntaje">
+                  <div class="rating1 ">
+                    <input value="5" name="rate4" id="star5mod4" type="radio">
+                    <label for="star5mod4">★</label>
+                    <input value="4" name="rate4" id="star4mod4" type="radio">
+                    <label for="star4mod4">★</label>
+                    <input value="3" name="rate4" id="star3mod4" type="radio" checked>
+                    <label for="star3mod4">★</label>
+                    <input value="2" name="rate4" id="star2mod4" type="radio">
+                    <label for="star2mod4">★</label>
+                    <input value="1" name="rate4" id="star1mod4" type="radio">
+                    <label for="star1mod4">★</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class=" col-sm-12 col-lg-3 col-md-12 col-sm-12 my-2   d-flex ">
+        <!-- Barra lateral -->
+        <div class="col-md-11 col-sm-12  bg-dark-subtle px-2 mx-auto rounded-3  mx-2 border ">
+          <ul class="list-group my-2   ">
+            <!-- <li class="list-group-item">CERTIFICADOS</li> -->
+
+
+
+
+
+            <!-- collapse salir - configurar -->
+            <li class="list-group-item rounded-3">
+              <p class="d-inline-flex gap-1 w-100">
+                <a class="text-decoration-none text-dark pt-2 w-100" data-bs-toggle="collapse"
+                  href="#multiCollapseExample6" role="button" aria-expanded="false"
+                  aria-controls="multiCollapseExample1">SALIR <span class="float-end"><i class="fa fa-chevron-down fs-5"></i></span></a>
+
+              </p>
+
+
+
+              <div class="collapse multi-collapse " id="multiCollapseExample6">
+                <div class="container  ">
+                  <div class=" row  justify-content-center py-1 gap-1 ">
+
+
+
+                    <button type="button" class=" col-sm-12 col-lg-5  btn btn-success btn-sm rounded-2 "
+                      data-bs-toggle="modal" data-bs-target="#modalEditarPerfil"">
+                        Editar
+                      </button>
+
+                      <a href=" ./cerrando.html" class="col-lg-5 col-sm-12 btn btn-dark  rounded-2 p-3">
+
+                      Cerrar sesión
+
+                      </a>
+
+                  </div>
+                </div>
+              </div>
+
+            </li>
+
+
+
+            <li class="list-group-item">
+              <p class="d-inline-flex gap-1 w-100">
+                <a class="text-decoration-none text-dark pt-2 w-100" data-bs-toggle="collapse"
+                  href="#multiCollapseExample3" role="button" aria-expanded="false"
+                  aria-controls="multiCollapseExample3">REPORTES <span class="float-end"><i class="fa fa-chevron-down fs-5"></i></span></a>
+
+              </p>
+              <div class="row  ">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample3">
+
+                    <!-- formulario de reporte -->
+                    <div class="bootstrap-form ">
+                      <div class="container">
+                        <form>
+                          <div class="mb-3 row">
+                            <label for="inputName" class="col-sm-3 col-form-label ">Name</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+                            </div>
+                          </div>
+
+                          <div class="mb-3 row">
+                            <label for="inputEmail" class="col-sm-3 col-form-label ">Email</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="inputEmail" placeholder="correo elcetrónico ">
+                            </div>
+                          </div>
+
+
+                          <div class="mb-3 row">
+                            <!-- <label for="inputMessage" class="col-sm-3 col-form-label text-end">Mens</label> -->
+                            <div class="col-sm-12">
+                              <textarea class="form-control" id="inputMessage" rows="5"
+                                placeholder="Mensaje"></textarea>
+                            </div>
+                          </div>
+
+                          <div class="mb-3 row">
+                            <div class="col-sm-12 text-end">
+                              <input type="submit" class="btn btn-primary" value="Envia">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+            </li>
+
+
+          </ul>
+
+          <!-- Sección de descargas -->
+          <div
+            class="col-md-12 rounded-3 col-sm-12 col-md-12 m-auto px-2 my-4 bg-dark-subtle mb-4  m-auto text-center   ">
+            <h5>Recursos de Descarga</h5>
+            <div class="d-grid gap-2  m-auto ">
+              <div class="row text-center gap-1 justify-content-center ">
+
+                <!-- recurso 1  ----------------------- -->
+                <button type="button " class="btn btn-primary   col-lg-5 col-sm-11 " data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">
+                  <span><i class="fa-solid fa-folder-open mx-2"></i></span>Módulo Estilo
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl ">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <iframe class="col-lg-12 col-md-12 col-10 border border-info"
+                          src="https://archive.org/embed/ellibrodelcine0000unse" width="560" height="800"
+                          frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen>
+
+                        </iframe>
+
+                        <!-- <div style="text-align:center;"><div style="margin:8px 0px 4px;"><a href="https://www.calameo.com/books/00263542470fad3e70863" target="_blank"></a></div><iframe src="//v.calameo.com/?bkcode=00263542470fad3e70863" width="100%" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe><div style="margin:4px 0px 8px;"><a href="http://www.calameo.com/"></a></div></div> -->
+
+                      </div>
+                      <div class="modal-footer">
+                        <a href="https://archive.org/embed/ellibrodelcine0000unse" class="btn btn-success"
+                          target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-download me-2"></i>Descargar publicación
+                        </a>
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- recurso 2  ----------------------- -->
+
+                <button type="button " class="btn btn-primary   col-lg-5 col-sm-11 " data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2">
+                  <span><i class="fa-solid fa-folder-open mx-2"></i></span>Módulo Guión
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl ">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <img class="col-lg-12 col-md-12 col-12"
+                          src="https://www.pictoline.com/imgs/2021/05/04/CDusnfPbSHETY0CpFkzjSVaWeYUNB2ywYfEqdJ61.png"
+                          alt="infofraphic-pictoline">
+
+                      </div>
+                      <div class="modal-footer">
+                        <a href="https://www.pictoline.com/imgs/2021/05/04/CDusnfPbSHETY0CpFkzjSVaWeYUNB2ywYfEqdJ61.png"
+                          class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-download me-2"></i>Descargar Guión
+                        </a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- recurso 3  ----------------------- -->
+
+                <button type="button " class="btn btn-primary   col-lg-5 col-sm-11 " data-bs-toggle="modal"
+                  data-bs-target="#exampleModal3">
+                  <span><i class="fa-solid fa-folder-open mx-2"></i></span>Módulo producción
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl ">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <img class="col-lg-12 col-md-12 col-12"
+                          src="https://digitalsynopsis.com/wp-content/uploads/2017/02/film-movies-color-psychology-infographic.jpg"
+                          alt="">
+                      </div>
+                      <div class="modal-footer">
+
+                        <a href="https://digitalsynopsis.com/wp-content/uploads/2017/02/film-movies-color-psychology-infographic.jpg"
+                          download="infografia-produccion.jpg" class="btn btn-success" target="_blank">
+                          <i class="fa-solid fa-download me-2"></i>Descargar Infografía
+                        </a>
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- recurso 4  ----------------------- -->
+
+                <button type="button " class="btn btn-primary   col-lg-5 col-sm-11 " data-bs-toggle="modal"
+                  data-bs-target="#exampleModal4">
+                  <span><i class="fa-solid fa-folder-open mx-2"></i></span>Módulo Edición
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl ">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <iframe src="https://www.slideshare.net/slideshow/embed_code/key/BzfBiXeiEnMrx9?startSlide=1"
+                          class="col-lg-11 col-lg-12 col-md-12 col-12" height="506" frameborder="0" marginwidth="0"
+                          marginheight="0" scrolling="no"
+                          style="border:1px solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;"
+                          allowfullscreen>
+                        </iframe>
+                        <div style="margin-bottom:5px">
+                          <strong><a href="https://es.slideshare.net/slideshow/edicion-de-videos/73107787"
+                              title="Edicion de videos" target="_blank" class=" text-dark">Edicion de videos</a>
+                          </strong> from <strong><a href="https://es.slideshare.net/BrayanGuacheta1" target="_blank "
+                              class=" text-dark">Brayan Guacheta</a></strong>
+                        </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <a href="https://es.slideshare.net/slideshow/edicion-de-videos/73107787" download
+                          class="btn btn-success" target="_blank">
+                          <i class="fa-solid fa-download me-2"></i>Descargar
+                        </a>
+                        <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- AVANCE DEL PROCESO y PRESENTAR EXAMEN -->
+
+          <div class="examen col-lg-12 col-md-12 col-sm-12  bg-dark-subtle px-2 rounded-3 ">
+
+
+            <div class="d-flex flex-column gap-2 col-12 mx-auto ">
+              <button id="btnQuizz" class="btn btn-dark" type="button"><a href="./quizz.html"
+                  style="text-decoration: none; color:white;">presentar examen</a></button>
+              <button id="btncertificado" class="btn btn-success" type="button"><a href="./certificado"
+                  style="text-decoration: none; color:white;">certificado</a></button>
+              <!-- progreso----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+              <div class="progreso-test text-center d-flex flex-column rounded-2 py-3 align-items-center justify-content-center">
+                <div class="row w-100 justify-content-center">
+                  <div class="col-12">
+                    <h1 class="fs-5 pt-2">Tu progreso</h1>
+                  </div>
+                </div>
+                <div class="row w-100 justify-content-center">
+                  <div class="col-12 d-flex align-items-center justify-content-center" style="height: 160px;">
+                    <svg id="progress-ring" width="200" height="200">
+                      <circle r="60" cx="100" cy="100" fill="transparent" stroke="#e6e6e6" stroke-width="16"/>
+                      <circle id="progreso" r="60" cx="100" cy="100" fill="transparent" stroke="#0dcaf0" stroke-width="16" stroke-linecap="round" stroke-dasharray="376.8" stroke-dashoffset="376.8"/>
+                      <text id="progreso-text" x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="36" fill="#222">0%</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <!-- footer -->
+
+  <footer>
+    <div class="container">
+      <div class="row text-white">
+        <div class="col-md-4">
+          <div class="footer-section">
+            <div class="footer-header">
+              contacto
+              <i class="bi bi-caret-down-fill border border-danger "></i>
+            </div>
+            <ul class="footer-links">
+              <li>nuestros canales de comunicación</li>
+              <li>comentarios y sugerencias</li>
+              <li>correo@correoemp.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-section">
+            <div class="footer-header">
+              sobre nosotros
+              <i class="bi bi-caret-down-fill"></i>
+            </div>
+            <ul class="footer-links">
+              <li>nuestro MOOC</li>
+              <li>módulos y referencias</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-section">
+            <div class="footer-header">términos y condiciones</div>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-primary"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="text-danger"><i class="fa-solid fa-circle-play"></i></a>
+              <a href="#" class="text-info"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/dashboard.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+ <!--  <script src="../js/progreso.js"></script> -->
+
+</body>
+
+</html>

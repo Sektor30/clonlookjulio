@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+    <link rel="shortcut icon" href="./assets/logo prime.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      @media (max-width: 576px){
+       .capsula{
+        margin: 20px;
+        width: 95%;
+       } 
+      }
+
+      @media (max-width: 256px){
+       .capsula{
+        margin: 20px 20px;
+        width: 80%;
+       } 
+      }
+    </style>
+       
+</head>
+<body class=" d-flex justify-content-center align-items-center vh-100">
+
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-primary " id="exampleModalLabel">el usuario ya esta registrado.</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-dark ">
+          Verifica si ya estás registrado e ingresa a iniciar sesión.
+          <img src="../assets/beeTriste.png" alt="Abeja triste" id="beeTristeImg" style="max-width: 60%; display: block; margin: 0 auto 10px auto;"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="./inicio-sesion.html"><button type="button" class="btn btn-primary">iniciar sesion</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="bg-white capsula p-4 rounded-5 text-secondary shadow" style="width: 25rem">
+    <!-- boton de regreso -->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <a href="../index.html"><button type="button" class="btn btn-outline-info border m-2"><i class="fa-solid fa-xmark"></i></button></a>
+    </div>
+    <div class="text-center fs-1 fw-bold">REGÍSTRATE</div>
+    <form id="post">
+    <!-- nombre de usuario -->
+      <div class="input-group mt-4">
+        <div class="input-group-text bg-info">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <input class="form-control bg-light" id="nombre" type="text" placeholder="nombre de usuario" required/>
+      </div>
+        <!-- contraseña -->
+      <div class="input-group mt-1">
+        <div class="input-group-text bg-info">
+          <i class="fa-solid fa-unlock"></i>
+        </div>
+        <input class="form-control bg-light" id="contra" type="password" placeholder="contraseña" required/>
+      </div>
+      <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Regístrate
+      </button>
+    <div class="p-3">
+      <div class="border-bottom text-center" style="height: 0.9rem">
+        <span class="bg-white px-3">o</span>
+      </div>
+    </div>
+    <div class="w-100 text-center border-primary">
+    <a href="./inicio-sesion.html" class=" justify-content-center text-dark w-100 mt-4 fw-semibold shadow-sm" >
+      inicia sesión
+    </a>
+  </div>
+    <!-- Registro a través de Google -->
+    <div class="btn google d-flex gap-2 justify-content-center mt-3 ">
+      <div class="text-center mb-3 ">
+        <p class="text-dark">O regístrate a través de:</p>
+        <button type="button" class="btn btn-danger">
+          <i class="fab fa-google"></i> GOOGLE
+        </button>
+      </div>
+    </div>
+    </form>
+    </div>
+      
+    <script src="../js/registro.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>

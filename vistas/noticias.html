@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/logo prime.png" type="image/x-icon">
+    <title>chooj-curso-estilo</title>
+    <link rel="shortcut icon" href="../assets/chooj-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/noticias.css">
+
+    <!-- styles  nav-footer -->
+    
+       
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+
+
+    <!-------- animate css cdnjs -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+     integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>  
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+       crossorigin="anonymous" referrerpolicy="no-referrer">
+      </script>
+      <style>
+        .nav-link{
+          color: #ffffff;
+        }
+        .nav-link:hover{
+          color: #06aefc;
+        }
+        .dropdown-toggle{
+          color: #06aefc;
+        }
+
+        /* Estilos para botones activos del sidebar */
+        .sidebar .btn.active {
+          background-color: #0056b3;
+          border-color: #0056b3;
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          transform: scale(1.05);
+        }
+
+        .sidebar .btn.active:hover {
+          background-color: #004085;
+          border-color: #004085;
+        }
+
+        /* Estilos para las listas colapsables */
+        .sidebar .collapse .card {
+          border: 1px solid #dee2e6;
+          border-radius: 0.375rem;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .sidebar .collapse .card-body {
+          padding: 0.75rem;
+        }
+
+        .sidebar .collapse ul li {
+          border-bottom: 1px solid #f8f9fa;
+          padding: 0.5rem 0;
+        }
+
+        .sidebar .collapse ul li:last-child {
+          border-bottom: none;
+        }
+
+        .sidebar .collapse ul li a {
+          color: #495057;
+          font-size: 0.9rem;
+          transition: color 0.2s ease;
+        }
+
+        .sidebar .collapse ul li a:hover {
+          color: #0056b3;
+          font-weight: 500;
+        }
+
+        /* Animación suave para el collapse */
+        .collapse {
+          transition: all 0.3s ease;
+        }
+
+        /* Ajuste de font-size para el texto de los modales de publicaciones */
+        .modal-publicacion-body {
+          font-size: 17px;
+        }
+        @media (min-width: 768px) {
+          .modal-publicacion-body {
+            font-size: 18px;
+          }
+        }
+      </style>
+
+  </head>
+
+ 
+<body class=" m-0  bd-example m-0  p-0">
+
+    
+  <nav class="navbar navbar-expand-lg  px-4  ">
+    <a class="navbar-brand" href="#" id="miEnlace">
+        <img src="../assets/logolook2.png" width="200px" alt="logo-chooj"/>
+    </a>
+    <button class="navbar-toggler" style="color: rgba(245, 222, 179, 0);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa-solid fa-bars fs-2 text-info"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center " id="navbarNav" >
+        <ul class="navbar-nav  ms-auto p-0 fs-5">
+
+          <li id="btnmodulos" class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Modulos
+            </a>
+            <ul class="dropdown-menu  ">
+              <li><a class="dropdown-item" href="../vistas/estilos.html">Estilos</a></li>
+              <li><a class="dropdown-item" href="../vistas/guiones.html">Guiones</a></li>
+              <li><a class="dropdown-item" href="../vistas/produccion.html">Produccion</a></li>
+              <li><a class="dropdown-item" href="../vistas/edicion.html">Edición</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link " href="../vistas/quienes-somos.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Certificación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../vistas/noticias.html">Blog</a>
+          </li>
+          <a class="nav-link" id="btniniciar" href="../vistas/inicio-sesion.html"><button id="btniniciar" class="btn btn-outline-light mx-2">Inicio Sesión</button></a>
+          <a class="nav-link" id="btnregistro"  href="../vistas/registro.html"><button id="btnregistro" class="btn btn-outline-light">Registro</button></a>
+          <li class="nav-item">
+            <!-- Botón para abrir el offcanvas -->
+            <a id="ico" class="nav-link p-0" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
+              <i id="ico" class="fa-regular fa-circle-user fs-1 m-0 px-3"></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+ 
+<!-- Offcanvas (sidebar para la info del usuario) -->
+<div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasUser" aria-labelledby="offcanvasUserLabel">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasUserLabel">Información del Usuario</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body ">
+      <p><strong>Nombre:</strong> <p id="NombreUser"></p></p>
+      <p><strong>Email:</strong> usuario@example.com</p>
+      <hr>
+      
+      <a href="../vistas/dashboard.html" class="btn btn-primary w-100 mb-2">Dashboard</a>
+      <a href="./cerrando.html" class="btn btn-outline-danger w-100">Cerrar sesión</a>
+
+      <div class="mod">
+      <div class="nav-item dropdown py-4">
+          <a class="nav-link  text-center text-dark border-bottom border-dark " >
+            Módulos
+          </a>
+         
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:ESTILOS</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-estilos-offcanvas" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+          
+                <a href="./estilos.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:GUIONES</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-guiones-offcanvas" role="progressbar" style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+          
+                <a href="./guiones.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:PRODUCCIÓN</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-produccion-offcanvas" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">5%</div>
+                </div>
+          
+                <a href="./produccion.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12 my-3">
+            <div class="card h-100">
+              <!-- <img src="ruta-de-tu-imagen.jpg" class="card-img-top" alt="Imagen del módulo"> -->
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MÓDULO:EDICIÓN</h5>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-primary" id="progress-edicion-offcanvas" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">5%</div>
+                </div>
+          
+                <a href="./edicion.html" class="btn btn-outline-primary mt-auto">Ver módulo</a>
+                
+              </div>
+            </div>
+          </div>
+
+        </div> 
+      </div>
+  </div>
+  
+</div>
+
+    <!-- INICIO DE SECTION NOTICIAS -->
+    <main class="col">
+        
+    <div class="container-fluid my-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 sidebar">
+                <div class="d-flex flex-column p-3">
+                    <h3 class="text-center mb-4">Categorías</h3>
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-primary btn-lg" id="btnPublicaciones" data-bs-toggle="collapse" data-bs-target="#listaPublicaciones" aria-expanded="false" aria-controls="listaPublicaciones">
+                            <i class="fas fa-newspaper me-2"></i>Publicaciones
+                        </button>
+                        <div class="collapse" id="listaPublicaciones">
+                            <div class="card card-body mt-2">
+                                <ul class="list-unstyled text-center mb-0">
+                                    <li class="mb-2"><a href="#" class="text-decoration-none" data-modal="modalCard1">La animación digital: retos y avances</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none" data-modal="modalCard2">Los efectos prácticos en las producciones cinematográficas</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none" data-modal="modalCard3">Nuestra lista de mejores películas</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none" data-modal="modalCard4">Técnicas avanzadas de storyboarding</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none" data-modal="modalCard5">Efectos visuales en la era digital</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none" data-modal="modalCard6">Guión cinematográfico: estructura y narrativa</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none" data-modal="modalCard7">Iluminación en animación 3D</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-lg" id="btnRevistas" data-bs-toggle="collapse" data-bs-target="#listaRevistas" aria-expanded="false" aria-controls="listaRevistas">
+                            <i class="fas fa-book me-2"></i>Revista
+                        </button>
+                        <div class="collapse" id="listaRevistas">
+                            <div class="card card-body mt-2">
+                                <ul class="list-unstyled text-center mb-0">
+                                    <li class="mb-2"><a href="#" class="text-decoration-none revista-link" data-revista="1">Revista Digital #1</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none revista-link" data-revista="2">Revista Digital #2</a></li>
+                                    <li class="mb-2"><a href="#" class="text-decoration-none revista-link" data-revista="3">Revista Digital #3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                <h1 class="section-title text-center animate__animated animate__backInDown animate__tada">Nuestro blog</h1>
+                
+                <!-- Sección de video de introducción Marvel Productions -->
+                <div class="my-4 d-flex justify-content-center">
+                  <div style="max-width: 1800px; width: 100%;">
+                    <div id="carouselVideosMarvel" class="carousel slide" data-bs-interval="false">
+                      <div class="carousel-inner">
+                        <!-- Primer video: Marvel Productions (YouTube) -->
+                        <div class="carousel-item active">
+                          <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/5xH0HfJHsaY" title="Marvel Productions Intro" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                        <!-- Segundo video: Pixabay -->
+                        <div class="carousel-item">
+                          <div class="ratio ratio-16x9">
+                            <video controls>
+                              <source src="../assets/0001-0140.mp4" type="video/mp4">
+                              Tu navegador no soporta la reproducción de video.
+                            </video>
+                          </div>
+                        </div>
+                        <!-- Tercer video: Pixabay -->
+                        <div class="carousel-item">
+                          <div class="ratio ratio-16x9">
+                            <video controls>
+                              <source src="https://cdn.pixabay.com/video/2020/12/08/58726-489544206_large.mp4" type="video/mp4">
+                              Tu navegador no soporta la reproducción de video.
+                            </video>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideosMarvel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselVideosMarvel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- subtitulo publicaciones revista dinamico -->
+                <h2 class="section-title text-center ">Publicaciones </h2>
+                <!-- Contenedor de Publicaciones -->
+                <div id="contenedorPublicaciones" class="row row-cols-1 row-cols-md-2 g-4">
+                    <!-- Modal XL para la primera card -->
+                    <div class="modal fade" id="modalCard1" tabindex="-1" aria-labelledby="modalCard1Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl modal-dialog-centered align-items-center d-flex" style="min-height:100vh;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCard1Label">La animación digital: retos y avances</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body  py-4  d-flex justify-content-center" style="max-height:70vh; overflow-y:auto; font-size: 24px;">
+                            <div style="width:80%; text-align:justify; text-justify:inter-word;" class="modal-publicacion-body">
+                              <img src="https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen publicación" style="width:80%; height:50%; display:block; margin:0 auto 24px auto; object-fit:cover;">
+                              <p>
+                                La animación digital ha revolucionado la manera en que se cuentan historias, se transmiten ideas y se crean mundos imaginarios. Desde sus inicios, la animación ha sido un campo en constante evolución, enfrentando retos técnicos, artísticos y narrativos. En la actualidad, la animación digital se ha consolidado como una de las industrias más dinámicas y creativas, abarcando desde el cine y la televisión hasta los videojuegos, la publicidad y la educación.
+                              </p>
+                              <p>
+                                Uno de los principales retos de la animación digital es la rápida evolución de la tecnología. Los profesionales deben mantenerse actualizados con las últimas herramientas y técnicas, lo que implica una formación continua y una gran capacidad de adaptación. Además, la competencia global exige altos estándares de calidad y originalidad, lo que motiva a los estudios y artistas a innovar constantemente.
+                              </p>
+                              <p>
+                                La narrativa en la animación digital también ha experimentado avances significativos. Hoy en día, los creadores pueden explorar temáticas complejas y profundas, abordando cuestiones sociales, filosóficas y emocionales con una libertad creativa sin precedentes. La animación permite representar realidades alternativas, mundos fantásticos y personajes imposibles, ampliando los límites de la imaginación humana.
+                              </p>
+                              <p>
+                                Otro aspecto fundamental es la colaboración interdisciplinaria. La animación digital reúne a artistas, programadores, guionistas, músicos y especialistas en efectos visuales, entre otros. Esta sinergia de talentos enriquece el proceso creativo y da lugar a obras de gran complejidad y belleza. Sin embargo, coordinar equipos multidisciplinarios puede ser un desafío, especialmente en proyectos de gran escala.
+                              </p>
+                              <p>
+                                En cuanto a los avances, la inteligencia artificial y el aprendizaje automático están comenzando a transformar la animación digital. Estas tecnologías permiten automatizar tareas repetitivas, mejorar la simulación de movimientos y generar efectos visuales más realistas. Asimismo, la realidad virtual y aumentada abren nuevas posibilidades para la interacción y la inmersión del espectador, creando experiencias únicas y personalizadas.
+                              </p>
+                              <p>
+                                La accesibilidad es otro avance importante. Hoy en día, existen herramientas y plataformas que permiten a cualquier persona interesada iniciarse en la animación digital, independientemente de su nivel de experiencia. Esto ha democratizado el acceso a la creación audiovisual y ha dado voz a nuevas generaciones de artistas y narradores.
+                              </p>
+                              <p>
+                                No obstante, la animación digital también enfrenta retos éticos y sociales. La representación de la diversidad, el respeto a los derechos de autor y la protección de los datos personales son cuestiones que requieren atención y responsabilidad por parte de los creadores y las empresas del sector.
+                              </p>
+                              <p>
+                                En conclusión, la animación digital es un campo apasionante y en constante transformación. Sus retos impulsan la innovación y el crecimiento profesional, mientras que sus avances abren nuevas fronteras para la creatividad y la comunicación. El futuro de la animación digital promete ser aún más sorprendente, con historias y experiencias que seguirán cautivando a audiencias de todo el mundo.
+                              </p>
+                              <p class="py-4">
+                                <strong>Referencias:</strong><br>
+                                - "The Animation Guild. (2022). Animation Industry Overview."<br>
+                                - "Williams, R. (2012). The Animator's Survival Kit. Faber & Faber."<br>
+                                - "Thomas, F. & Johnston, O. (1995). The Illusion of Life: Disney Animation. Disney Editions."
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Fin Modal XL para la primera card -->
+
+                    <!-- Modal XL para la segunda card -->
+                    <div class="modal fade" id="modalCard2" tabindex="-1" aria-labelledby="modalCard2Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl modal-dialog-centered align-items-center d-flex" style="min-height:100vh;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCard2Label">Los efectos prácticos en las producciones cinematográficas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body py-4 d-flex justify-content-center" style="max-height:70vh; overflow-y:auto; font-size: 24px;">
+                            <div style="width:80%; text-align:justify; text-justify:inter-word;" class="modal-publicacion-body">
+                              <img src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen publicación" style="width:80%; height:50%; display:block; margin:0 auto 24px auto; object-fit:cover;">
+                              <p>
+                                Los efectos prácticos han sido la base de la magia cinematográfica desde los inicios del cine. A diferencia de los efectos digitales, los efectos prácticos se crean físicamente durante el rodaje, utilizando técnicas como maquetas, animatrónicos, explosiones controladas, maquillaje especial y escenografías elaboradas.
+                              </p>
+                              <p>
+                                Uno de los aspectos más fascinantes de los efectos prácticos es su capacidad para crear una sensación de autenticidad que a veces es difícil de lograr con efectos digitales. Los actores pueden interactuar directamente con estos elementos, lo que resulta en actuaciones más naturales y convincentes. Además, los efectos prácticos no requieren el mismo nivel de post-producción que los efectos digitales, lo que puede reducir costos y tiempo de producción.
+                              </p>
+                              <p>
+                                Sin embargo, los efectos prácticos también presentan desafíos únicos. Requieren una planificación meticulosa, ya que no se pueden "deshacer" fácilmente si algo sale mal. También pueden ser peligrosos para el equipo y los actores, por lo que es esencial contar con profesionales experimentados y todas las medidas de seguridad necesarias.
+                              </p>
+                              <p>
+                                En la actualidad, muchos directores optan por una combinación de efectos prácticos y digitales, aprovechando lo mejor de ambos mundos. Los efectos prácticos proporcionan la base física, mientras que los efectos digitales se utilizan para mejorar y complementar estos elementos.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal XL para la tercera card -->
+                    <div class="modal fade" id="modalCard3" tabindex="-1" aria-labelledby="modalCard3Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl modal-dialog-centered align-items-center d-flex" style="min-height:100vh;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCard3Label">Nuestra lista de mejores películas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body py-4 d-flex justify-content-center" style="max-height:70vh; overflow-y:auto; font-size: 24px;">
+                            <div style="width:80%; text-align:justify; text-justify:inter-word;" class="modal-publicacion-body">
+                              <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen publicación" style="width:80%; height:50%; display:block; margin:0 auto 24px auto; object-fit:cover;">
+                              <p>
+                                Cada año, la industria cinematográfica nos sorprende con nuevas historias, innovaciones técnicas y actuaciones memorables. Nuestra lista de las mejores películas del año refleja la diversidad y creatividad que caracteriza al cine contemporáneo.
+                              </p>
+                              <p>
+                                Desde dramas intimistas hasta épicas de ciencia ficción, cada película en nuestra lista ha sido seleccionada por su excelencia artística, innovación técnica y capacidad para conectar con las audiencias. Estas películas no solo entretienen, sino que también desafían nuestras perspectivas y nos invitan a reflexionar sobre el mundo que nos rodea.
+                              </p>
+                              <p>
+                                La selección incluye tanto producciones independientes como grandes blockbusters, demostrando que la calidad cinematográfica no está limitada por el presupuesto, sino por la visión creativa y la pasión de los realizadores.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal XL para la cuarta card -->
+                    <div class="modal fade" id="modalCard4" tabindex="-1" aria-labelledby="modalCard4Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl modal-dialog-centered align-items-center d-flex" style="min-height:100vh;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCard4Label">Técnicas avanzadas de storyboarding</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body py-4 d-flex justify-content-center" style="max-height:70vh; overflow-y:auto; font-size: 24px;">
+                            <div style="width:80%; text-align:justify; text-justify:inter-word;" class="modal-publicacion-body">
+                              <img src="https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg" alt="Imagen publicación" style="width:80%; height:50%; display:block; margin:0 auto 24px auto; object-fit:cover;">
+                              <p>
+                                El storyboarding es una herramienta fundamental en la producción audiovisual que permite visualizar y planificar cada escena antes de comenzar el rodaje. Un storyboard bien ejecutado puede ahorrar tiempo y recursos significativos durante la producción.
+                              </p>
+                              <p>
+                                Las técnicas avanzadas de storyboarding incluyen el uso de perspectiva, composición cinematográfica, y la capacidad de transmitir emociones y narrativa a través de imágenes estáticas. Los storyboarders deben tener un profundo entendimiento de la narrativa visual y la capacidad de comunicar ideas complejas de manera clara y efectiva.
+                              </p>
+                              <p>
+                                Con el avance de la tecnología, el storyboarding digital ha ganado popularidad, permitiendo mayor flexibilidad y facilidad de revisión. Sin embargo, las técnicas tradicionales de dibujo a mano siguen siendo valoradas por su espontaneidad y capacidad de capturar la esencia de una idea rápidamente.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal XL para la quinta card -->
+                    <div class="modal fade" id="modalCard5" tabindex="-1" aria-labelledby="modalCard5Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl modal-dialog-centered align-items-center d-flex" style="min-height:100vh;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCard5Label">Efectos visuales en la era digital</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body py-4 d-flex justify-content-center" style="max-height:70vh; overflow-y:auto; font-size: 24px;">
+                            <div style="width:80%; text-align:justify; text-justify:inter-word;" class="modal-publicacion-body">
+                              <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Imagen publicación" style="width:80%; height:50%; display:block; margin:0 auto 24px auto; object-fit:cover;">
+                              <p>
+                                Los efectos visuales han revolucionado la manera en que contamos historias en el cine y la televisión. En la era digital, las posibilidades son prácticamente ilimitadas, permitiendo a los creadores materializar cualquier visión imaginable.
+                              </p>
+                              <p>
+                                Desde la creación de mundos completamente digitales hasta la integración perfecta de elementos CGI con imágenes reales, los efectos visuales modernos han alcanzado un nivel de realismo que hace imposible distinguir entre lo real y lo digital. Esta tecnología ha democratizado la creación de contenido, permitiendo que producciones independientes accedan a herramientas que antes solo estaban disponibles para grandes estudios.
+                              </p>
+                              <p>
+                                Sin embargo, el verdadero arte de los efectos visuales no está en la tecnología, sino en cómo se utiliza para servir a la narrativa. Los mejores efectos visuales son aquellos que pasan desapercibidos, mejorando la historia sin distraer de ella.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal XL para la sexta card -->
+                    <div class="modal fade" id="modalCard6" tabindex="-1" aria-labelledby="modalCard6Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl modal-dialog-centered align-items-center d-flex" style="min-height:100vh;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCard6Label">Guión cinematográfico: estructura y narrativa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body py-4 d-flex justify-content-center" style="max-height:70vh; overflow-y:auto; font-size: 24px;">
+                            <div style="width:80%; text-align:justify; text-justify:inter-word;" class="modal-publicacion-body">
+                              <img src="https://cdn.pixabay.com/photo/2015/07/27/20/16/book-863418_1280.jpg" alt="Imagen publicación" style="width:80%; height:50%; display:block; margin:0 auto 24px auto; object-fit:cover;">
+                              <p>
+                                El guión cinematográfico es la base de toda producción audiovisual. Un buen guión combina estructura narrativa sólida con diálogos naturales y personajes bien desarrollados. La estructura tradicional de tres actos sigue siendo una herramienta valiosa, pero los guionistas modernos también experimentan con estructuras no lineales y narrativas complejas.
+                              </p>
+                              <p>
+                                La creación de personajes memorables es fundamental para el éxito de cualquier guión. Los personajes deben tener motivaciones claras, conflictos internos y externos, y un arco de desarrollo que resuene con la audiencia. Además, el diálogo debe sonar natural y servir tanto para avanzar la trama como para revelar aspectos de los personajes.
+                              </p>
+                              <p>
+                                En la era digital, los guionistas también deben considerar cómo su historia se adaptará a diferentes plataformas y formatos, desde películas tradicionales hasta series de streaming y contenido interactivo.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal XL para la séptima card -->
+                    <div class="modal fade" id="modalCard7" tabindex="-1" aria-labelledby="modalCard7Label" aria-hidden="true">
+                      <div class="modal-dialog modal-xl modal-dialog-centered align-items-center d-flex" style="min-height:100vh;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalCard7Label">Iluminación en animación 3D</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                          </div>
+                          <div class="modal-body py-4 d-flex justify-content-center" style="max-height:70vh; overflow-y:auto; font-size: 24px;">
+                            <div style="width:80%; text-align:justify; text-justify:inter-word;" class="modal-publicacion-body">
+                              <img src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg" alt="Imagen publicación" style="width:80%; height:50%; display:block; margin:0 auto 24px auto; object-fit:cover;">
+                              <p>
+                                La iluminación en animación 3D es uno de los aspectos más importantes para crear ambientes realistas y emocionalmente impactantes. A diferencia de la iluminación tradicional en cine, la iluminación 3D permite un control absoluto sobre cada fuente de luz, su intensidad, color y comportamiento.
+                              </p>
+                              <p>
+                                Las técnicas de iluminación 3D incluyen el uso de luces ambientales para simular la iluminación general del entorno, luces direccionales para crear sombras definidas, y luces de relleno para suavizar las sombras y revelar detalles en las áreas oscuras. El uso de mapas de entorno (HDRI) permite crear iluminaciones realistas basadas en fotografías del mundo real.
+                              </p>
+                              <p>
+                                La iluminación también juega un papel crucial en la narrativa visual, ayudando a establecer el estado de ánimo, dirigir la atención del espectador y crear profundidad y dimensión en las escenas.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 1 -->
+                    <div class="col">
+                        <div class="news-card h-100">
+                            <div class="news-image primera" data-bs-toggle="modal" data-bs-target="#modalCard1" style="cursor:pointer;">
+                                <img src="https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                alt="" class="img-fluid">
+                            </div>
+                            <div class="news-body border">
+                                <div class="news-author">
+                                    <img src="https://via.placeholder.com/30" alt="author" class="rounded-circle me-2">
+                                    <span>Admin</span>
+                                    <span class="news-rating">★★★★★</span>
+                                </div>
+                                <h5 class="news-title"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCard1">La animación digital: retos y avances </a></h5>
+                                <p class="text-muted">Descubre el mundo de la animación.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col">
+                        <div class="news-card h-100">
+                            <div class="news-image segunda" data-bs-toggle="modal" data-bs-target="#modalCard2" style="cursor:pointer;">
+                                <img src="https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                alt="Efectos prácticos" class="img-fluid">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-author">
+                                    <img src="https://via.placeholder.com/30" alt="author" class="rounded-circle me-2">
+                                    <span>Admin</span>
+                                    <span class="news-rating">★★★★☆</span>
+                                </div>
+                                <h5 class="news-title"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCard2">Los efectos prácticos en las producciones cinematográficas</a></h5>
+                                <p class="text-muted">Conoce algunas experiencias de profesionales en este oficio</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col">
+                        <div class="news-card h-100">
+                            <div class="news-image tercera" data-bs-toggle="modal" data-bs-target="#modalCard3" style="cursor:pointer;">
+                                <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                alt="Mejores películas" class="img-fluid">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-author">
+                                    <img src="https://via.placeholder.com/30" alt="author" class="rounded-circle me-2">
+                                    <span>Admin</span>
+                                    <span class="news-rating">★★★★☆</span>
+                                </div>
+                                <h5 class="news-title"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCard3">Nuestra lista de mejores películas</a></h5>
+                                <p class="text-muted">Conoce las mejores películas de este año.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col">
+                        <div class="news-card h-100">
+                            <div class="news-image primera" data-bs-toggle="modal" data-bs-target="#modalCard4" style="cursor:pointer;">
+                                <img src="https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg" 
+                                alt="Storyboarding" class="img-fluid">
+                            </div>
+                            <div class="news-body border">
+                                <div class="news-author">
+                                    <img src="https://via.placeholder.com/30" alt="author" class="rounded-circle me-2">
+                                    <span>Carlos Rodríguez</span>
+                                    <span class="news-rating">★★★★★</span>
+                                </div>
+                                <h5 class="news-title"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCard4">Técnicas avanzadas de storyboarding</a></h5>
+                                <p class="text-muted">Aprende las mejores prácticas para crear storyboards profesionales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col">
+                        <div class="news-card h-100">
+                            <div class="news-image segunda" data-bs-toggle="modal" data-bs-target="#modalCard5" style="cursor:pointer;">
+                                <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" 
+                                alt="Efectos visuales" class="img-fluid">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-author">
+                                    <img src="https://via.placeholder.com/30" alt="author" class="rounded-circle me-2">
+                                    <span>María González</span>
+                                    <span class="news-rating">★★★★☆</span>
+                                </div>
+                                <h5 class="news-title"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCard5">Efectos visuales en la era digital</a></h5>
+                                <p class="text-muted">Explora las últimas tendencias en efectos visuales y post-producción.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col">
+                        <div class="news-card h-100">
+                            <div class="news-image tercera" data-bs-toggle="modal" data-bs-target="#modalCard6" style="cursor:pointer;">
+                                <img src="https://cdn.pixabay.com/photo/2015/07/27/20/16/book-863418_1280.jpg" 
+                                alt="Guión cinematográfico" class="img-fluid">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-author">
+                                    <img src="https://via.placeholder.com/30" alt="author" class="rounded-circle me-2">
+                                    <span>Andrés López</span>
+                                    <span class="news-rating">★★★★★</span>
+                                </div>
+                                <h5 class="news-title"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCard6">Guión cinematográfico: estructura y narrativa</a></h5>
+                                <p class="text-muted">Descubre los secretos para escribir guiones que cautiven a la audiencia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="col">
+                        <div class="news-card h-100">
+                            <div class="news-image primera" data-bs-toggle="modal" data-bs-target="#modalCard7" style="cursor:pointer;">
+                                <img src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_1280.jpg" 
+                                alt="Iluminación 3D" class="img-fluid">
+                            </div>
+                            <div class="news-body border">
+                                <div class="news-author">
+                                    <img src="https://via.placeholder.com/30" alt="author" class="rounded-circle me-2">
+                                    <span>Ana Martínez</span>
+                                    <span class="news-rating">★★★★☆</span>
+                                </div>
+                                <h5 class="news-title"><a href="#" data-bs-toggle="modal" data-bs-target="#modalCard7">Iluminación en animación 3D</a></h5>
+                                <p class="text-muted">Técnicas profesionales para crear ambientes únicos en tus proyectos 3D.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor de Revistas (inicialmente oculto) -->
+                <div id="contenedorRevistas" class="container" style="display: none;">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-info text-center">
+                                <h4>Sección de Revistas</h4>
+                                <p>Contenido de revistas próximamente...</p>
+
+                            </div>
+                            
+<div class="container   m-auto  " style="width:85%; ">
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header">
+          <h5 class="card-title mb-0">Revista Digital #1</h5>
+        </div>
+        <div class="card-body p-0">
+          <iframe id="revista-1" style="display:none; border: 1px solid #777;" src="https://indd.adobe.com/embed/e22edfaa-5b7c-4c4c-9b2d-a20ff36e60af?startpage=1&allowFullscreen=true" width="100%" height="371px" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header">
+          <h5 class="card-title mb-0">Revista Digital #2</h5>
+        </div>
+        <div class="card-body p-0">
+          <iframe id="revista-2" style="display:none; border: 1px solid #777;" src="https://indd.adobe.com/embed/e22edfaa-5b7c-4c4c-9b2d-a20ff36e60af?startpage=2&allowFullscreen=true" width="100%" height="371px" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header">
+          <h5 class="card-title mb-0">Revista Digital #3</h5>
+        </div>
+        <div class="card-body p-0">
+          <div style="text-align:center;"><div style="margin:8px 0px 4px;"><a href="https://www.calameo.com/books/00798180532671705d01c" target="_blank">Look Magazine Arte Cinematográfico Chooj3</a></div><iframe src="//v.calameo.com/?bkcode=00798180532671705d01c&mode=mini&clickto=view&clicktarget=_self" width="500" height="350" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe><div style="margin:4px 0px 8px;"><a href="http://www.calameo.com/" target="_blank">Leer más publicaciones en Calaméo</a></div></div>
+
+          <!-- <iframe id="revista-3" style="display:none; border: 1px solid #777;" src="https://indd.adobe.com/embed/e22edfaa-5b7c-4c4c-9b2d-a20ff36e60af?startpage=3&allowFullscreen=true" width="100%" height="371px" frameborder="0" allowfullscreen=""></iframe> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FINAL DE SECTION NOTICIAS -->
+
+</main>
+
+    <!-- pie de pagina ------------------------------------------------------------------------------->
+    <footer>
+        <div class="container ">
+          <div class="row text-white">
+            <div class="col-md-4  ">
+              <div class="footer-section">
+                <div class="footer-header">
+                  contacto
+                  <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <ul class="footer-links">
+                  <li>nuestros canales de comunicación</li>
+                  <li>comentarios y sugerencias</li>
+                  <li>correo@correoemp.com</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer-section">
+                <div class="footer-header">
+                  sobre nosotros
+                  <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <ul class="footer-links">
+                  <li>nuestro MOOC</li>
+                  <li>módulos y referencias</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer-section">
+                <div class="footer-header">términos y condiciones</div>
+                <div class="social-icons mt-3">
+                  <a href="#" class="text-primary"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                  <a href="#" class="text-danger"
+                    ><i class="fa-solid fa-circle-play"></i
+                  ></a>
+                  <a href="#" class="text-info"
+                    ><i class="fa-brands fa-telegram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>   
+   
+     <script src="../js/validarUsuario.js"></script>
+
+     <script src="../js/noticias.js"></script>
+     <script src="../js/progreso.js"></script>
+     <script>
+     document.addEventListener('DOMContentLoaded', function() {
+       // Oculta el contenedor de revistas al inicio
+       document.getElementById('contenedorRevistas').style.display = 'none';
+
+       // Maneja el clic en los enlaces de revista individuales
+       document.querySelectorAll('.revista-link').forEach(function(link) {
+         link.addEventListener('click', function(e) {
+           e.preventDefault();
+           document.getElementById('contenedorRevistas').style.display = 'block';
+           // Oculta todos los iframes
+           document.querySelectorAll('#contenedorRevistas iframe').forEach(function(iframe) {
+             iframe.style.display = 'none';
+           });
+           // Muestra el iframe correspondiente
+           var num = this.getAttribute('data-revista');
+           var iframe = document.getElementById('revista-' + num);
+           if (iframe) {
+             iframe.style.display = 'block';
+           }
+         });
+       });
+
+       // Maneja el clic en el botón principal de Revista para mostrar todos los iframes
+       var btnRevistas = document.getElementById('btnRevistas');
+       if (btnRevistas) {
+         btnRevistas.addEventListener('click', function() {
+           document.getElementById('contenedorRevistas').style.display = 'block';
+           // Muestra todos los iframes
+           document.querySelectorAll('#contenedorRevistas iframe').forEach(function(iframe) {
+             iframe.style.display = 'block';
+           });
+         });
+       }
+     });
+     </script>
+</body>
+
+
+</html>

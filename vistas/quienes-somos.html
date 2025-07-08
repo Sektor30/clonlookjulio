@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOSOTROS</title>
+  <link rel="shortcut icon" href="./assets/logo prime.png" type="image/x-icon">
+
+ <!-- font-awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="../style.css">
+ <!-- animate.css -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+
+    .carousel-caption{
+      background-color: #4b4b4b83;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      /* background-color: #dddddd; */
+      background: rgb(1,0,10);
+      background: radial-gradient(circle, rgba(1,0,10,1) 0%, rgba(0,0,23,1) 92%, rgba(0,4,5,1) 100%);
+    }
+    .nav-link{
+      color: #ffffff;
+    }
+    .nav-link:hover{
+      color: #06aefc;
+    }
+    .dropdown-toggle{
+      color: #06aefc;
+    }
+  </style> 
+       
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
+
+  <nav class="navbar navbar-expand-lg  px-4  ">
+    <a class="navbar-brand" href="#" id="miEnlace">
+        <img src="../assets/logolook2.png" width="200px" alt="logo-chooj"/>
+    </a>
+    <button class="navbar-toggler" style="color: rgba(245, 222, 179, 0);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa-solid fa-bars fs-2 text-info"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center " id="navbarNav" >
+        <ul class="navbar-nav  ms-auto p-0 fs-5">
+
+          <li id="btnmodulos" class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Modulos
+            </a>
+            <ul class="dropdown-menu  ">
+              <li><a class="dropdown-item" href="../vistas/estilos.html">Estilos</a></li>
+              <li><a class="dropdown-item" href="../vistas/guiones.html">Guiones</a></li>
+              <li><a class="dropdown-item" href="../vistas/produccion.html">Produccion</a></li>
+              <li><a class="dropdown-item" href="../vistas/edicion.html">Edición</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link " href="../vistas/quienes-somos.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Certificación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../vistas/noticias.html">Blog</a>
+          </li>
+          <a class="nav-link" id="btniniciar" href="../vistas/inicio-sesion.html"><button id="btniniciar" class="btn btn-outline-light mx-2">Inicio Sesión</button></a>
+          <a class="nav-link" id="btnregistro"  href="../vistas/registro.html"><button id="btnregistro" class="btn btn-outline-light">Registro</button></a>
+          <li class="nav-item">
+            <!-- Botón para abrir el offcanvas -->
+            <a id="ico" class="nav-link p-0" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasUser" aria-controls="offcanvasUser">
+              <i id="ico" class="fa-regular fa-circle-user fs-1 m-0 px-3"></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+ 
+<!-- Offcanvas (sidebar para la info del usuario) -->
+<div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasUser" aria-labelledby="offcanvasUserLabel">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasUserLabel">Información del Usuario</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body ">
+      <p><strong>Nombre:</strong> <p id="NombreUser"></p></p>
+      <p><strong>Email:</strong> usuario@example.com</p>
+      <hr>
+      
+      <a href="../vistas/dashboard.html" class="btn btn-primary w-100 mb-2">Dashboard</a>
+      <a href="./cerrando.html" class="btn btn-outline-danger w-100">Cerrar sesión</a>
+  </div>
+</div>
+  
+</div>
+
+<!-- quienes somos  -->
+  <main class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1 class="display-4">Nosotros</h1>
+      <p class="lead">
+        Somos Look, un MOOC de aprendizaje sobre cine y animación. Acompáñanos en esta aventura donde aprenderás lo básico sobre la elaboración y finalización de un filme.
+      </p>
+      <a download href="#" class="btn btn-primary btn-lg">Descargar CV</a>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="../assets/logo prime.png" alt="logo" class="img-fluid" style="max-width: 400px;">
+    </div>
+  </div>
+</main>
+<!-- valores de la empresa -->
+<section class="container py-5 about">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <!-- Agrega aquí una imagen si quieres -->
+    </div>
+    <div class="col-md-6">
+      <h2>Valores de la empresa</h2>
+      <p>Ofrecer a los interesados en aprender
+        Arte Cinematográfico, una herramienta
+        útil, fácil de usar, y llena de contenido
+        didáctico que logrará llenar las
+        expectativas de los que con ella
+        interactúan, al ritmo y en lugar que los
+        usuarios prefieran, de forma gratuita,
+        simplemente con un dispositivo de
+        cómputo y conexión a internet.</p>
+     
+      <button class="btn btn-outline-secondary">Read more</button>
+    </div>
+  </div>
+</section>
+
+<!-- CREADORES JAJAJJAA -->
+<h1 class="display-4 text-center ">Creadores</h1>
+<main class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="display-4">Mateo Echeverri</h1>
+        <p class="lead">
+          Passionate about creating meaningful software that solves real-world problems.
+        </p>
+        <a download href="#" class="btn btn-primary btn-lg">mas sobre mi</a>
+
+        <div class="d-flex justify-content-start mt-3">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-link text-primary me-2">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn btn-link text-info me-2">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-link text-primary">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="../assets/logo prime.png" alt="logo" class="img-fluid" style="max-width: 400px;">
+      </div>
+    </div>
+  </main>
+  <main class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="display-4">Mateo Echeverri</h1>
+        <p class="lead">
+          Passionate about creating meaningful software that solves real-world problems.
+        </p>
+        <a download href="#" class="btn btn-primary btn-lg">mas sobre mi</a>
+
+        <div class="d-flex justify-content-start mt-3">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-link text-primary me-2">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn btn-link text-info me-2">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-link text-primary">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="../assets/logo prime.png" alt="logo" class="img-fluid" style="max-width: 400px;">
+      </div>
+    </div>
+  </main>
+
+
+
+<section class="container py-5 contact-section">
+  <div class="text-center mb-4">
+    <h2>Mantenerse en contacto</h2>
+    <hr class="mx-auto" style="width:100px;">
+  </div>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="../assets/FANTASMA1.png" alt="" class="img-fluid" style="width:500px; height:600px;">
+    </div>
+    <div class="col-md-6">
+      <h4>Envíame un mensaje...</h4>
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Place your message here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row text-white">
+        <div class="col-md-4">
+          <div class="footer-section">
+            <div class="footer-header">
+              contacto
+              <i class="bi bi-caret-down-fill"></i>
+            </div>
+            <ul class="footer-links">
+              <li>nuestros canales de comunicación</li>
+              <li>comentarios y sugerencias</li>
+              <li>correo@correoemp.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-section">
+            <div class="footer-header">
+              sobre nosotros
+              <i class="bi bi-caret-down-fill"></i>
+            </div>
+            <ul class="footer-links">
+              <li>nuestro MOOC</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-section">
+            <div class="footer-header">términos y condiciones</div>
+              <div class="social-icons mt-3">
+                <a href="#" class="text-primary"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                  <a href="#" class="text-danger"
+                    ><i class="fa-solid fa-circle-play"></i
+                  ></a>
+                  <a href="#" class="text-info"
+                    ><i class="fa-brands fa-telegram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/validarUsuario.js"></script>
+    <script src="../js/progreso.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
